@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const experience = [
   {
     role: "Senior Software Engineer",
@@ -77,9 +79,9 @@ export default function Home() {
       <main id="main">
         <section className="hero shell" id="top" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="eyebrow"><span className="eyebrow-line" /> Software engineer · Philippines</p>
+            <p className="eyebrow"><span className="eyebrow-line" /> Philippines · Product, systems, delivery</p>
             <h1 id="hero-title">
-              Making ideas <em>work</em> through software.
+              Senior software engineer. <em>Making ideas work.</em>
             </h1>
             <p className="hero-description">
               I&apos;m John Mark Bodegas. I build full-stack products, connect the systems behind them,
@@ -95,11 +97,15 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-panel">
+            <Image
+              className="panel-photo"
+              src="/JMB.jpg"
+              alt="John Mark Bodegas"
+              fill
+              sizes="(max-width: 850px) 100vw, 45vw"
+              priority
+            />
             <div className="panel-topline"><span>What I bring</span><span>01 / 03</span></div>
-            <div className="panel-mark" aria-hidden="true">
-              <span className="mark-vertical" /><span className="mark-horizontal" />
-              <span className="mark-circle" />
-            </div>
             <div className="panel-bottom">
               <p>From first conversation<br />to reliable release.</p>
               <span>Product <span className="panel-separator">/</span> Systems <span className="panel-separator">/</span> Delivery</span>
