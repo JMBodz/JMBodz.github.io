@@ -20,7 +20,7 @@ pnpm typecheck
 pnpm build
 ```
 
-The static site is generated in `out/`. The GitHub Actions workflow deploys it to GitHub Pages on pushes to `main`. In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**. This user site lives at the domain root, so no `basePath` is needed.
+The static site is generated in `out/`. The GitHub Actions workflow deploys it to GitHub Pages on pushes to `main`. In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**. Selecting **Deploy from a branch** runs GitHub's Jekyll workflow against the repository source and can publish this README instead of the Next.js export. This user site lives at the domain root, so no `basePath` is needed.
 
 The design direction is recorded in `design-system/john-mark-bodegas-portfolio/MASTER.md`.
 The implementation plan is in `docs/portfolio-plan.md`.
