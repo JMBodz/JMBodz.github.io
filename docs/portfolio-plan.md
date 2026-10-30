@@ -37,3 +37,11 @@ The portfolio source was published to `JMBodz/JMBodz.github.io`, and its Pages b
 - Replace the dense inline Core tools list with a separate Tools and technologies section. Group the existing tools into frontend, backend, and data/platforms; show local SVG icons beside visible text labels. Use the .NET mark for ASP.NET Core and a Microsoft mark for Dynamics. Devicon assets are included under their MIT license in `public/tech/DEVICON-LICENSE.txt`.
 - Open both N-LITE links in new tabs with `noopener noreferrer` and an accessible new-tab cue.
 - Verify type checking, static export, responsive layout at 375/768/1024/1440 px, keyboard accessibility, and live GitHub Pages deployment.
+
+## Expanded tool inventory — 2026-10-31
+
+- Record SQL Server in RapidSignal Electronics' experience bullet and technology tags, and in the portfolio and profile tool lists.
+- Expand the portfolio's technology groups to cover frontend, backend and APIs, data and enterprise, AI integrations, cloud platforms, deployment and CI/CD, development assistants, and testing. Keep every technology name visible; use local brand SVGs where available and neutral SVGs otherwise.
+- List Codex and Claude Code as development assistants; Vercel, Render, DigitalOcean, Google Cloud, Azure, Docker, Docker Hub, GitHub, and GitHub Actions for cloud and delivery; OpenAI API, Gemini, AssemblyAI, Retell AI, and DigitalOcean Agent Platform for AI integrations; and Playwright, Cypress, and Jest for testing. “OpenAI API” is the user's clarification of “OpenAPI.”
+- Keep `JMBodz/README.md` aligned with the portfolio, without assigning these newly listed tools to specific employers or implying proficiency levels. Devicon and Simple Icons assets in `public/tech` retain their respective license notices.
+- Verify static export, all labels and icon paths, responsive wrapping, GitHub Pages deployment, and the published profile README.
