@@ -76,21 +76,60 @@ const experience: Experience[] = [
 const capabilities = [
   {
     number: "01",
-    title: "Understand and plan",
+    title: "Discovery",
     description:
-      "Clarify the request, manage scope and delivery, and design the system architecture for a practical MVP.",
+      "Listen to clients, clarify the request, and turn ideas into clear goals and requirements.",
   },
   {
     number: "02",
-    title: "Build the MVP",
+    title: "Planning",
     description:
-      "Use full-stack engineering to build the interface, APIs, data model, and integrations.",
+      "Manage scope and delivery, design the system architecture, and plan a practical MVP.",
   },
   {
     number: "03",
-    title: "Grow into production",
+    title: "Development",
     description:
-      "Improve the product, automate releases, and make the system reliable as needs grow.",
+      "Build the MVP through full-stack engineering: interfaces, APIs, data, and integrations.",
+  },
+  {
+    number: "04",
+    title: "Delivery",
+    description:
+      "Deploy, improve, and scale the product into reliable production software.",
+  },
+];
+
+const technologyGroups = [
+  {
+    title: "Frontend",
+    tools: [
+      { name: "TypeScript", icon: "typescript" },
+      { name: "React", icon: "react" },
+      { name: "Next.js", icon: "nextjs" },
+      { name: "Blazor", icon: "blazor" },
+    ],
+  },
+  {
+    title: "Backend",
+    tools: [
+      { name: "Node.js", icon: "nodejs" },
+      { name: "NestJS", icon: "nestjs" },
+      { name: "C#", icon: "csharp" },
+      { name: ".NET", icon: "dotnet" },
+      { name: "ASP.NET Core", icon: "dotnet" },
+      { name: "Python", icon: "python" },
+      { name: "FastAPI", icon: "fastapi" },
+    ],
+  },
+  {
+    title: "Data & platforms",
+    tools: [
+      { name: "PostgreSQL", icon: "postgresql" },
+      { name: "MongoDB", icon: "mongodb" },
+      { name: "Docker", icon: "docker" },
+      { name: "Microsoft Dynamics", icon: "microsoft" },
+    ],
   },
 ];
 
@@ -117,7 +156,7 @@ export default function Home() {
       <main id="main">
         <section className="hero shell" id="top" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="eyebrow"><span className="eyebrow-line" /> Philippines · Product, systems, delivery</p>
+            <p className="eyebrow"><span className="eyebrow-line" aria-hidden="true" /> Discovery · Planning · Development · Delivery</p>
             <h1 id="hero-title">
               Senior software engineer. <em>Making ideas work.</em>
             </h1>
@@ -143,11 +182,6 @@ export default function Home() {
               sizes="(max-width: 850px) 100vw, 45vw"
               priority
             />
-            <div className="panel-topline"><span>What I bring</span></div>
-            <div className="panel-bottom">
-              <p>From first conversation<br />to reliable release.</p>
-              <span>Product <span className="panel-separator">/</span> Systems <span className="panel-separator">/</span> Delivery</span>
-            </div>
           </div>
         </section>
 
@@ -188,8 +222,9 @@ export default function Home() {
                   {item.links && (
                     <div className="experience-links">
                       {item.links.map((link) => (
-                        <a href={link.href} key={link.href}>
+                        <a href={link.href} key={link.href} target="_blank" rel="noopener noreferrer">
                           {link.label} <span aria-hidden="true">↗</span>
+                          <span className="sr-only"> (opens in a new tab)</span>
                         </a>
                       ))}
                     </div>
@@ -220,7 +255,30 @@ export default function Home() {
                 </article>
               ))}
             </div>
-            <p className="skills-line"><span>Core tools</span> TypeScript · React · Next.js · Node.js · NestJS · C# · .NET · ASP.NET Core · Blazor · Microsoft Dynamics · Python · FastAPI · PostgreSQL · MongoDB · Docker</p>
+          </div>
+        </section>
+
+        <section className="tools-section shell" aria-labelledby="tools-title">
+          <div className="section-heading tools-heading">
+            <div>
+              <p className="section-kicker">Tools and technologies</p>
+              <h2 id="tools-title">The stack behind the work.</h2>
+            </div>
+          </div>
+          <div className="tool-groups">
+            {technologyGroups.map((group) => (
+              <div className="tool-group" key={group.title}>
+                <h3>{group.title}</h3>
+                <ul>
+                  {group.tools.map((tool) => (
+                    <li key={tool.name}>
+                      <img src={`/tech/${tool.icon}.svg`} width="28" height="28" alt="" aria-hidden="true" />
+                      <span>{tool.name}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </section>
 
