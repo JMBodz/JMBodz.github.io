@@ -33,6 +33,14 @@ const experience = [
       "Deployed the application to DigitalOcean with CI/CD, added Twilio push notifications, and connected real-time market-value webhooks.",
     tags: ["DigitalOcean", "PostgreSQL", "Twilio"],
   },
+  {
+    role: "Software Engineer",
+    company: "RapidSignal Electronics",
+    period: "May 2021 — Dec 2022",
+    detail:
+      "Worked on enterprise systems for batching plants and manufacturing management using .NET, ASP.NET Core APIs, Blazor, and Microsoft Dynamics AX 2012 and 365.",
+    tags: [".NET", "ASP.NET Core", "Blazor", "Dynamics 365"],
+  },
 ];
 
 const capabilities = [
@@ -170,7 +178,7 @@ export default function Home() {
                 </article>
               ))}
             </div>
-            <p className="skills-line"><span>Core tools</span> TypeScript · React · Next.js · Node.js · NestJS · Python · FastAPI · PostgreSQL · MongoDB · Docker</p>
+            <p className="skills-line"><span>Core tools</span> TypeScript · React · Next.js · Node.js · NestJS · C# · .NET · ASP.NET Core · Blazor · Microsoft Dynamics · Python · FastAPI · PostgreSQL · MongoDB · Docker</p>
           </div>
         </section>
 
