@@ -68,8 +68,9 @@ const experience: Experience[] = [
     context: "Enterprise systems for batching plants and manufacturing management.",
     highlights: [
       "Worked with .NET MVC, ASP.NET Core APIs, Blazor, Dynamics AX 2012, and Dynamics 365.",
+      "Used SQL Server as the database for these enterprise systems.",
     ],
-    tags: [".NET", "ASP.NET Core", "Blazor", "Dynamics AX", "Dynamics 365"],
+    tags: [".NET", "ASP.NET Core", "Blazor", "Dynamics AX", "Dynamics 365", "SQL Server"],
   },
 ];
 
@@ -111,7 +112,7 @@ const technologyGroups = [
     ],
   },
   {
-    title: "Backend",
+    title: "Backend & APIs",
     tools: [
       { name: "Node.js", icon: "nodejs" },
       { name: "NestJS", icon: "nestjs" },
@@ -123,12 +124,56 @@ const technologyGroups = [
     ],
   },
   {
-    title: "Data & platforms",
+    title: "Data & enterprise",
     tools: [
       { name: "PostgreSQL", icon: "postgresql" },
       { name: "MongoDB", icon: "mongodb" },
-      { name: "Docker", icon: "docker" },
+      { name: "SQL Server", icon: "sqlserver" },
       { name: "Microsoft Dynamics", icon: "microsoft" },
+    ],
+  },
+  {
+    title: "AI integrations",
+    tools: [
+      { name: "OpenAI API", icon: "ai-integration" },
+      { name: "Gemini", icon: "googlegemini" },
+      { name: "AssemblyAI", icon: "ai-integration" },
+      { name: "Retell AI", icon: "ai-integration" },
+      { name: "DigitalOcean Agent Platform", icon: "digitalocean" },
+    ],
+  },
+  {
+    title: "Cloud platforms",
+    tools: [
+      { name: "Vercel", icon: "vercel" },
+      { name: "Render", icon: "render" },
+      { name: "DigitalOcean", icon: "digitalocean" },
+      { name: "Google Cloud", icon: "googlecloud" },
+      { name: "Azure", icon: "azure" },
+    ],
+  },
+  {
+    title: "Deployment & CI/CD",
+    tools: [
+      { name: "Docker", icon: "docker" },
+      { name: "Docker Hub", icon: "docker" },
+      { name: "GitHub", icon: "github" },
+      { name: "GitHub Actions", icon: "githubactions" },
+    ],
+  },
+  {
+    title: "Development assistants",
+    tools: [
+      { name: "Codex", icon: "coding-assistant" },
+      { name: "Claude Code", icon: "claude" },
+    ],
+  },
+  {
+    title: "Testing",
+    tools: [
+      { name: "Playwright", icon: "playwright" },
+      { name: "Cypress", icon: "cypress" },
+      { name: "Jest", icon: "jest" },
     ],
   },
 ];

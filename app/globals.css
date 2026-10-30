@@ -98,11 +98,12 @@ h1 em, .contact-section h2 em { color: var(--color-accent); font-style: normal; 
 .tools-section { padding-block: 110px 118px; }
 .tools-heading { margin-bottom: 42px; }
 .tool-groups { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.tool-group { padding: 28px; border: 1px solid var(--color-border); background: var(--color-card); }
+.tool-group { min-width: 0; padding: 28px; border: 1px solid var(--color-border); background: var(--color-card); }
 .tool-group h3 { margin-bottom: 22px; font-size: 22px; font-weight: 600; letter-spacing: -.035em; }
 .tool-group ul { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
 .tool-group li { display: flex; align-items: center; gap: 14px; min-height: 42px; color: var(--color-secondary); font-size: 16px; font-weight: 500; }
 .tool-group img { flex: 0 0 28px; width: 28px; height: 28px; object-fit: contain; }
+.tool-group li span { min-width: 0; overflow-wrap: break-word; }
 
 .contact-section { padding-block: 120px 140px; }
 .contact-section .section-kicker { margin-bottom: 20px; }
@@ -134,7 +135,6 @@ h1 em, .contact-section h2 em { color: var(--color-accent); font-style: normal; 
   .capability-card { padding: 25px; }
   .tools-section { padding-block: 90px; }
   .tool-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .tool-group:last-child { grid-column: 1 / -1; }
 }
 
 @media (max-width: 620px) {
@@ -157,7 +157,6 @@ h1 em, .contact-section h2 em { color: var(--color-accent); font-style: normal; 
   .capability-card { min-height: 210px; }
   .capability-card + .capability-card { border-left: 0; border-top: 1px solid #42526a; }
   .tool-groups { grid-template-columns: 1fr; }
-  .tool-group:last-child { grid-column: auto; }
   .tool-group { padding: 24px; }
   .contact-section { padding-block: 90px 100px; }
   .contact-layout { display: block; }
