@@ -2,7 +2,7 @@
 
 ## Goal
 
-Use `../files/John Mark Bodegas CV.pdf` as the source for the GitHub profile and a Next.js portfolio at `https://jmbodz.github.io/`. Publish email, LinkedIn, and GitHub links. Keep the phone number and CV PDF private.
+Use the workspace CV at `files/John Mark Bodegas CV.pdf` as the source for the GitHub profile and a Next.js portfolio at `https://jmbodz.github.io/`. Publish email, LinkedIn, and GitHub links. Keep the phone number and CV PDF private.
 
 ## Work
 
@@ -19,6 +19,6 @@ Use `../files/John Mark Bodegas CV.pdf` as the source for the GitHub profile and
 - Review at 375, 768, 1024, and 1440 px for overflow, readable text, keyboard focus, contrast, and reduced motion.
 - Confirm the Pages workflow succeeds and the live portfolio and profile links work.
 
-## Publishing prerequisites
+## Publishing status
 
-The local portfolio repository has no commits or remote yet. GitHub CLI authentication currently reports an invalid token. Restore authentication and create or connect the remote before pushing.
+The portfolio source was published to `JMBodz/JMBodz.github.io`, and its Pages build and deployment succeeded. The GitHub profile README is also on `JMBodz/JMBodz`. GitHub CLI authentication in this workspace remains invalid, so future command-line pushes will require renewed authentication.
