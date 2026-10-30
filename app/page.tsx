@@ -1,66 +1,96 @@
 import Image from "next/image";
 
-const experience = [
+type Experience = {
+  role: string;
+  company: string;
+  period: string;
+  context: string;
+  highlights: string[];
+  tags: string[];
+  links?: { label: string; href: string }[];
+};
+
+const experience: Experience[] = [
   {
     role: "Senior Software Engineer",
     company: "N-LITE Sports",
     period: "Dec 2021 — Present",
-    detail:
-      "Planned features with use case and robustness diagrams. Built recurring team practices, Stripe seat-based subscriptions, multisport organization tools, and player assessments.",
+    context: "Sports software for organizations, clubs, teams, and players.",
+    highlights: [
+      "Planned features with use case and robustness diagrams.",
+      "Built recurring team practices and Stripe seat-based subscriptions.",
+      "Added multisport organization tools and player assessments.",
+    ],
     tags: ["Next.js", "NestJS", "MongoDB", "Stripe"],
+    links: [
+      { label: "N-LITE public website", href: "https://nlitesports.com/" },
+      { label: "N-LITE enterprise platform", href: "https://enterprise.n-lite.us/" },
+    ],
   },
   {
     role: "Senior Software Engineer",
     company: "Assembled Systems",
     period: "Dec 2025 — Sep 2026",
-    detail:
-      "Integrated audio and text processing for customer service quality analysis with 95%+ accuracy. Added OCR and vision recognition for knowledge-base files and customizable playbook forms.",
+    context: "Tools for customer service quality analysis and playbook management.",
+    highlights: [
+      "Integrated audio and text processing for quality analysis with 95%+ accuracy.",
+      "Added OCR and vision recognition for knowledge-base files.",
+      "Built customizable forms for playbook management.",
+    ],
     tags: ["React", "TypeScript", "Python", "FastAPI"],
   },
   {
     role: "Backend Engineer",
     company: "ICTI",
     period: "Dec 2025 — Feb 2026",
-    detail:
-      "Implemented asset tokenization with ICP DFX, CI/CD smoke tests for canisters and ledgers, and automated staging cycle monitoring and top-ups.",
+    context: "Asset tokenization on the Internet Computer.",
+    highlights: [
+      "Implemented tokenization using ICP DFX.",
+      "Added CI/CD smoke tests for canisters and ledgers, plus automated staging cycle monitoring and top-ups.",
+    ],
     tags: ["Rust", "ICP", "CI/CD"],
   },
   {
     role: "DevOps Engineer",
     company: "Trade Imperial",
     period: "Jul 2025 — Aug 2025",
-    detail:
-      "Deployed the application to DigitalOcean with CI/CD, added Twilio push notifications, and connected real-time market-value webhooks.",
+    context: "Deployment and integrations for a trading application.",
+    highlights: [
+      "Deployed the application to DigitalOcean with CI/CD.",
+      "Added Twilio push notifications and real-time market-value webhooks.",
+    ],
     tags: ["DigitalOcean", "PostgreSQL", "Twilio"],
   },
   {
     role: "Software Engineer",
     company: "RapidSignal Electronics",
     period: "May 2021 — Dec 2022",
-    detail:
-      "Worked on enterprise systems for batching plants and manufacturing management using .NET, ASP.NET Core APIs, Blazor, and Microsoft Dynamics AX 2012 and 365.",
-    tags: [".NET", "ASP.NET Core", "Blazor", "Dynamics 365"],
+    context: "Enterprise systems for batching plants and manufacturing management.",
+    highlights: [
+      "Worked with .NET MVC, ASP.NET Core APIs, Blazor, Dynamics AX 2012, and Dynamics 365.",
+    ],
+    tags: [".NET", "ASP.NET Core", "Blazor", "Dynamics AX", "Dynamics 365"],
   },
 ];
 
 const capabilities = [
   {
     number: "01",
-    title: "Build the product",
+    title: "Understand and plan",
     description:
-      "Turn an idea into usable web features, from the interface and API to the underlying data model.",
+      "Clarify the request, manage scope and delivery, and design the system architecture for a practical MVP.",
   },
   {
     number: "02",
-    title: "Connect the systems",
+    title: "Build the MVP",
     description:
-      "Make payments, messaging, data processing, and external services work as part of one coherent flow.",
+      "Use full-stack engineering to build the interface, APIs, data model, and integrations.",
   },
   {
     number: "03",
-    title: "Ship with confidence",
+    title: "Grow into production",
     description:
-      "Set up deployments and automation that help teams release changes reliably and keep improving.",
+      "Improve the product, automate releases, and make the system reliable as needs grow.",
   },
 ];
 
@@ -92,8 +122,8 @@ export default function Home() {
               Senior software engineer. <em>Making ideas work.</em>
             </h1>
             <p className="hero-description">
-              I&apos;m John Mark Bodegas. I build full-stack products, connect the systems behind them,
-              and help teams ship with confidence.
+              I&apos;m John Mark Bodegas. I turn client ideas into production software through
+              project management, system architecture, and full-stack engineering.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="mailto:johnmarkbodegas041095@gmail.com">
@@ -113,7 +143,7 @@ export default function Home() {
               sizes="(max-width: 850px) 100vw, 45vw"
               priority
             />
-            <div className="panel-topline"><span>What I bring</span><span>01 / 03</span></div>
+            <div className="panel-topline"><span>What I bring</span></div>
             <div className="panel-bottom">
               <p>From first conversation<br />to reliable release.</p>
               <span>Product <span className="panel-separator">/</span> Systems <span className="panel-separator">/</span> Delivery</span>
@@ -125,8 +155,8 @@ export default function Home() {
           <div className="shell intro-inner">
             <p className="section-kicker">A little about me</p>
             <p>
-              I work at the intersection of <strong>business needs and engineering detail</strong> —
-              shaping ideas, building useful software, and making the path to production smoother.
+              I start by <strong>understanding the client&apos;s request</strong>, then analyze and plan it,
+              build an MVP, and scale it into a production system.
             </p>
           </div>
         </section>
@@ -135,9 +165,9 @@ export default function Home() {
           <div className="section-heading">
             <div>
               <p className="section-kicker">Selected experience</p>
-              <h2 id="work-title">Work that moves things forward.</h2>
+              <h2 id="work-title">Where I worked and what I built.</h2>
             </div>
-            <p>Across product engineering, integrations, and delivery.</p>
+            <p>Real product work across web apps, integrations, and delivery.</p>
           </div>
           <div className="experience-list">
             {experience.map((item, index) => (
@@ -148,10 +178,22 @@ export default function Home() {
                 <div className="experience-main">
                   <p className="experience-company">{item.company}</p>
                   <h3>{item.role}</h3>
-                  <p className="experience-detail">{item.detail}</p>
+                  <p className="experience-context">{item.context}</p>
+                  <ul className="experience-highlights">
+                    {item.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+                  </ul>
                   <ul className="tag-list" aria-label={`Technologies used at ${item.company}`}>
                     {item.tags.map((tag) => <li key={tag}>{tag}</li>)}
                   </ul>
+                  {item.links && (
+                    <div className="experience-links">
+                      {item.links.map((link) => (
+                        <a href={link.href} key={link.href}>
+                          {link.label} <span aria-hidden="true">↗</span>
+                        </a>
+                      ))}
+                    </div>
+                  )}
                 </div>
                 <p className="experience-period">{item.period}</p>
               </article>
@@ -164,7 +206,7 @@ export default function Home() {
             <div className="section-heading approach-heading">
               <div>
                 <p className="section-kicker">How I work</p>
-                <h2 id="approach-title">A practical range, end to end.</h2>
+                <h2 id="approach-title">From the first idea to production.</h2>
               </div>
             </div>
             <div className="capability-grid">

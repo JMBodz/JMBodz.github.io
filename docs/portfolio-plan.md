@@ -22,3 +22,10 @@ Use the workspace CV at `files/John Mark Bodegas CV.pdf` and the user's RapidSig
 ## Publishing status
 
 The portfolio source was published to `JMBodz/JMBodz.github.io`, and its Pages build and deployment succeeded. The GitHub profile README is also on `JMBodz/JMBodz`. GitHub CLI authentication in this workspace remains invalid, so future command-line pushes will require renewed authentication.
+
+## Readability update — 2026-10-31
+
+- Speak to hiring teams and potential clients equally. Lead with understanding client requests, project management, system architecture, full-stack engineering, building an MVP, and taking it to production.
+- Make the experience section easier to scan with a context sentence and short contribution bullets for each of the five roles. Keep technologies separate from the work itself and use at least 16px for body copy.
+- Give the N-LITE public website (`https://nlitesports.com/`) and enterprise platform (`https://enterprise.n-lite.us/`) equally visible, clearly labeled links. The enterprise URL is user-provided and was not independently accessible from this workspace.
+- Remove the unexplained `01 / 03` label over the portrait. Check mobile wrapping, keyboard focus, both links, type checking, the static export, and the GitHub Pages deployment.
