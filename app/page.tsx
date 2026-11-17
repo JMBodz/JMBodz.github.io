@@ -218,7 +218,7 @@ export default function Home() {
               turning business and startup ideas into scalable, production-ready applications.
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href="mailto:johnmarkbodegas041095@gmail.com">
+              <a className="button button-primary" href="mailto:johnmarkbodegas041095@gmail.com" data-umami-event="contact_email" data-umami-event-placement="hero">
                 Get in touch <span aria-hidden="true">↗</span>
               </a>
               <a className="text-link" href="#work">
@@ -275,7 +275,7 @@ export default function Home() {
                   {item.links && (
                     <div className="experience-links">
                       {item.links.map((link) => (
-                        <a href={link.href} key={link.href} target="_blank" rel="noopener noreferrer">
+                        <a href={link.href} key={link.href} target="_blank" rel="noopener noreferrer" data-umami-event="visit_project" data-umami-event-project={link.label}>
                           {link.label} <span aria-hidden="true">↗</span>
                           <span className="sr-only"> (opens in a new tab)</span>
                         </a>
@@ -346,7 +346,7 @@ export default function Home() {
               <h2 id="contact-title">Have something<br /><em>in mind?</em></h2>
               <p>I&apos;m always open to a conversation about useful products and challenging engineering work.</p>
             </div>
-            <a className="contact-link" href="mailto:johnmarkbodegas041095@gmail.com">
+            <a className="contact-link" href="mailto:johnmarkbodegas041095@gmail.com" data-umami-event="contact_email" data-umami-event-placement="contact">
               Start a conversation <span aria-hidden="true">↗</span>
             </a>
           </div>
@@ -357,9 +357,9 @@ export default function Home() {
         <div className="shell footer-inner">
           <p>© {new Date().getFullYear()} John Mark Bodegas</p>
           <div className="footer-links">
-            <a href="https://github.com/JMBodz" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-            <a href="https://www.linkedin.com/in/john-mark-bodegas/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-            <a href="mailto:johnmarkbodegas041095@gmail.com">Email <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/JMBodz" target="_blank" rel="noreferrer" data-umami-event="visit_github">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/john-mark-bodegas/" target="_blank" rel="noreferrer" data-umami-event="visit_linkedin">LinkedIn <span aria-hidden="true">↗</span></a>
+            <a href="mailto:johnmarkbodegas041095@gmail.com" data-umami-event="contact_email" data-umami-event-placement="footer">Email <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </footer>
