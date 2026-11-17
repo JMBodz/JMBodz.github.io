@@ -12,14 +12,14 @@ type Experience = {
 
 const experience: Experience[] = [
   {
-    role: "Senior Software Engineer",
+    role: "Pioneer Software Engineer & Assistant Project Manager",
     company: "N-LITE Sports",
     period: "Dec 2021 — Present",
-    context: "Sports software for organizations, clubs, teams, and players.",
+    context: "Sports analytics platform architected and built from scratch to production.",
     highlights: [
-      "Planned features with use case and robustness diagrams.",
-      "Built recurring team practices and Stripe seat-based subscriptions.",
-      "Added multisport organization tools and player assessments.",
+      "Helped define the system architecture, plan features, and manage delivery as a pioneering engineer and Assistant Project Manager.",
+      "Built multi-sport tools, scheduling and recurring team practices, Stripe payments and seat-based subscriptions, and player assessment modules.",
+      "Integrated AI analysis and GoHighLevel (GHL) workflows.",
     ],
     tags: ["Next.js", "NestJS", "MongoDB", "Stripe"],
     links: [
@@ -28,14 +28,14 @@ const experience: Experience[] = [
     ],
   },
   {
-    role: "Senior Software Engineer",
+    role: "Architect & Senior Software Engineer",
     company: "Assembled Systems",
     period: "Dec 2025 — Sep 2026",
-    context: "Tools for customer service quality analysis and playbook management.",
+    context: "Multi-tenant customer support QA system and playbook management.",
     highlights: [
-      "Integrated audio and text processing for quality analysis with 95%+ accuracy.",
-      "Added OCR and vision recognition for knowledge-base files.",
-      "Built customizable forms for playbook management.",
+      "Architected and delivered a multi-tenant QA system with audio and text quality analysis achieving 95%+ accuracy.",
+      "Integrated file processing, OCR, and vision recognition for knowledge-base content.",
+      "Built custom form builders for playbook management and quality assessments.",
     ],
     tags: ["React", "TypeScript", "Python", "FastAPI"],
   },
@@ -45,7 +45,7 @@ const experience: Experience[] = [
     period: "Dec 2025 — Feb 2026",
     context: "Asset tokenization on the Internet Computer.",
     highlights: [
-      "Implemented tokenization using ICP DFX.",
+      "Contributed asset tokenization and blockchain infrastructure using Rust and ICP DFX.",
       "Added CI/CD smoke tests for canisters and ledgers, plus automated staging cycle monitoring and top-ups.",
     ],
     tags: ["Rust", "ICP", "CI/CD"],
@@ -56,7 +56,7 @@ const experience: Experience[] = [
     period: "Jul 2025 — Aug 2025",
     context: "Deployment and integrations for a trading application.",
     highlights: [
-      "Deployed the application to DigitalOcean with CI/CD.",
+      "Delivered rapid cloud deployment on DigitalOcean with automated CI/CD pipelines.",
       "Added Twilio push notifications and real-time market-value webhooks.",
     ],
     tags: ["DigitalOcean", "PostgreSQL", "Twilio"],
@@ -79,7 +79,7 @@ const capabilities = [
     number: "01",
     title: "Discovery",
     description:
-      "Listen to clients, clarify the request, and turn ideas into clear goals and requirements.",
+      "Analyze business and startup ideas, understand client needs, and turn them into clear goals and requirements.",
   },
   {
     number: "02",
@@ -162,6 +162,14 @@ const technologyGroups = [
     ],
   },
   {
+    title: "Blockchain",
+    tools: [
+      { name: "Rust" },
+      { name: "Internet Computer (ICP)" },
+      { name: "DFX" },
+    ],
+  },
+  {
     title: "Development assistants",
     tools: [
       { name: "Codex", icon: "coding-assistant" },
@@ -206,8 +214,8 @@ export default function Home() {
               Senior software engineer. <em>Making ideas work.</em>
             </h1>
             <p className="hero-description">
-              I&apos;m John Mark Bodegas. I turn client ideas into production software through
-              project management, system architecture, and full-stack engineering.
+              I&apos;m John Mark Bodegas, a software engineer with 5+ years of experience
+              turning business and startup ideas into scalable, production-ready applications.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="mailto:johnmarkbodegas041095@gmail.com">
@@ -234,8 +242,8 @@ export default function Home() {
           <div className="shell intro-inner">
             <p className="section-kicker">A little about me</p>
             <p>
-              I start by <strong>understanding the client&apos;s request</strong>, then analyze and plan it,
-              build an MVP, and scale it into a production system.
+              I build products from scratch through <strong>full-stack web development and system architecture</strong>,
+              connecting APIs, deploying to the cloud, and automating delivery with DevOps.
             </p>
           </div>
         </section>
@@ -309,6 +317,8 @@ export default function Home() {
               <p className="section-kicker">Tools and technologies</p>
               <h2 id="tools-title">The stack behind the work.</h2>
             </div>
+            <p>Next.js, React, NestJS, Node.js, Python/FastAPI, TypeScript, and MongoDB/PostgreSQL,
+              complemented by hands-on blockchain and DevOps experience.</p>
           </div>
           <div className="tool-groups">
             {technologyGroups.map((group) => (
@@ -317,7 +327,9 @@ export default function Home() {
                 <ul>
                   {group.tools.map((tool) => (
                     <li key={tool.name}>
-                      <img src={`/tech/${tool.icon}.svg`} width="28" height="28" alt="" aria-hidden="true" />
+                      {"icon" in tool && tool.icon && (
+                        <img src={`/tech/${tool.icon}.svg`} width="28" height="28" alt="" aria-hidden="true" />
+                      )}
                       <span>{tool.name}</span>
                     </li>
                   ))}

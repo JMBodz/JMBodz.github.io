@@ -4,12 +4,12 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "John Mark Bodegas | Senior Software Engineer",
   description:
-    "John Mark Bodegas is a senior software engineer building full-stack products, integrations, and reliable delivery systems.",
+    "Senior Software Engineer with 5+ years of experience turning business and startup ideas into production applications through full-stack development, system architecture, API integrations, cloud deployment, and DevOps automation.",
   metadataBase: new URL("https://jmbodz.github.io/"),
   openGraph: {
     title: "John Mark Bodegas | Senior Software Engineer",
     description:
-      "Full-stack engineering, systems thinking, and practical product delivery.",
+      "5+ years building production applications from scratch: full-stack engineering, system architecture, API integrations, cloud deployment, and DevOps automation.",
     url: "https://jmbodz.github.io/",
     type: "website",
   },
