@@ -211,15 +211,16 @@ export default function Home() {
           <div className="hero-copy">
             <p className="eyebrow"><span className="eyebrow-line" aria-hidden="true" /> Discovery · Planning · Development · Delivery</p>
             <h1 id="hero-title">
-              Senior software engineer. <em>Making ideas work.</em>
+              Senior <em>Full-Stack Engineer.</em>
             </h1>
             <p className="hero-description">
-              I&apos;m John Mark Bodegas, a software engineer with 5+ years of experience
-              turning business and startup ideas into scalable, production-ready applications.
+              I help founders ship MVPs built to scale. I bring 5+ years of experience taking products from
+              idea to production through system architecture, full-stack development, API and AI integrations,
+              and cloud deployment.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="mailto:johnmarkbodegas041095@gmail.com" data-umami-event="contact_email" data-umami-event-placement="hero">
-                Get in touch <span aria-hidden="true">↗</span>
+                Let’s discuss your idea. <span aria-hidden="true">↗</span>
               </a>
               <a className="text-link" href="#work">
                 Explore my work <span aria-hidden="true">↓</span>
@@ -344,7 +345,7 @@ export default function Home() {
           <div className="contact-layout">
             <div>
               <h2 id="contact-title">Have something<br /><em>in mind?</em></h2>
-              <p>I&apos;m always open to a conversation about useful products and challenging engineering work.</p>
+              <p>Have a product idea or a senior engineering role in mind? I’d be glad to hear from you.</p>
             </div>
             <a className="contact-link" href="mailto:johnmarkbodegas041095@gmail.com" data-umami-event="contact_email" data-umami-event-placement="contact">
               Start a conversation <span aria-hidden="true">↗</span>

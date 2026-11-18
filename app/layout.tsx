@@ -2,15 +2,16 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 
+const title = "John Mark Bodegas | Senior Full-Stack Engineer";
+const description = "I help founders ship MVPs built to scale, backed by 5+ years in software engineering.";
+
 export const metadata: Metadata = {
-  title: "John Mark Bodegas | Senior Software Engineer",
-  description:
-    "Senior Software Engineer with 5+ years of experience turning business and startup ideas into production applications through full-stack development, system architecture, API integrations, cloud deployment, and DevOps automation.",
+  title,
+  description,
   metadataBase: new URL("https://jmbodz.github.io/"),
   openGraph: {
-    title: "John Mark Bodegas | Senior Software Engineer",
-    description:
-      "5+ years building production applications from scratch: full-stack engineering, system architecture, API integrations, cloud deployment, and DevOps automation.",
+    title,
+    description,
     url: "https://jmbodz.github.io/",
     type: "website",
   },
