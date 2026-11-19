@@ -218,7 +218,7 @@ export default function Home() {
             JMB<span className="wordmark-dot">.</span>
           </a>
           <nav aria-label="Main navigation">
-            <a href="#work">Work</a>
+            <a href="#work">Experience</a>
             <a href="#approach">Approach</a>
             <a href="#contact">Contact</a>
           </nav>
@@ -237,7 +237,7 @@ export default function Home() {
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">
-                Explore my work
+                View my experience
               </a>
               <a className="text-link" href="mailto:johnmarkbodegas041095@gmail.com" data-umami-event="contact_email" data-umami-event-placement="hero">
                 Get in touch
@@ -267,7 +267,7 @@ export default function Home() {
 
         <section className="section shell" id="work" aria-labelledby="work-title">
           <div className="section-heading">
-            <h2 id="work-title">Selected work</h2>
+            <h2 id="work-title">Experience</h2>
           </div>
           <div className="experience-list">
             {experience.map((item) => (
