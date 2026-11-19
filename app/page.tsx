@@ -1,10 +1,12 @@
 import Image from "next/image";
 
 type Experience = {
+  id: string;
   role: string;
   company: string;
   period: string;
   context: string;
+  featured?: { project: string; outcome: string; detail: string };
   highlights: string[];
   tags: string[];
   links?: { label: string; href: string }[];
@@ -12,65 +14,80 @@ type Experience = {
 
 const experience: Experience[] = [
   {
-    role: "Pioneer Software Engineer & Assistant Project Manager",
+    id: "nlite-sports",
+    role: "Senior Software Engineer",
     company: "N-LITE Sports",
-    period: "Dec 2021 — Present",
-    context: "Sports analytics platform architected and built from scratch to production.",
+    period: "Dec 2021 – Nov 2026",
+    context: "Helped take a sports analytics platform from initial architecture to production and coordinated feature delivery.",
+    featured: {
+      project: "Subscription billing and AI player reports",
+      outcome: "15 sports organizations",
+      detail: "used the Stripe seat-based subscription billing I implemented, including academies, professional clubs, and amateur clubs.",
+    },
     highlights: [
-      "Helped define the system architecture, plan features, and manage delivery as a pioneering engineer and Assistant Project Manager.",
-      "Built multi-sport tools, scheduling and recurring team practices, Stripe payments and seat-based subscriptions, and player assessment modules.",
-      "Integrated AI analysis and GoHighLevel (GHL) workflows.",
+      "Built AI-powered player performance reports for single and multiple assessment events with DigitalOcean Agent Platform.",
+      "Added organization-wide controls for generating and regenerating reports, development plan validation, and optional human-review flags.",
+      "Built recurring practice scheduling and multi-sport support for clubs and teams.",
     ],
-    tags: ["Next.js", "NestJS", "MongoDB", "Stripe"],
+    tags: ["Next.js", "NestJS", "MongoDB", "Stripe", "DigitalOcean Agent Platform"],
     links: [
       { label: "N-LITE public website", href: "https://nlitesports.com/" },
       { label: "N-LITE enterprise platform", href: "https://enterprise.n-lite.us/" },
     ],
   },
   {
-    role: "Architect & Senior Software Engineer",
+    id: "assembled-systems",
+    role: "Senior Full-Stack Developer",
     company: "Assembled Systems",
-    period: "Dec 2025 — Sep 2026",
-    context: "Multi-tenant customer support QA system and playbook management.",
+    period: "Dec 2025 – Sep 2026",
+    context: "Led architecture and full-stack development of a multi-tenant platform for reviewing and coaching customer support agents.",
+    featured: {
+      project: "Customer support quality assurance",
+      outcome: "50 files per batch",
+      detail: "could be analyzed through the Redis-backed BullMQ queue I built, which also handled individual files.",
+    },
     highlights: [
-      "Architected and delivered a multi-tenant QA system with audio and text quality analysis achieving 95%+ accuracy.",
-      "Integrated file processing, OCR, and vision recognition for knowledge-base content.",
-      "Built custom form builders for playbook management and quality assessments.",
+      "Integrated AssemblyAI into a FastAPI service to transcribe and analyze recordings from Zendesk, Gorgias, and Intercom. Built transcript parsing and redaction.",
+      "Delivered exportable QA reports with configurable weighted scores and prioritized coaching recommendations.",
+      "Automated tenant subdomain provisioning and welcome emails for an AI mentor platform. Refined Jira tickets with product owners and project managers and clarified requirements through client demos.",
     ],
-    tags: ["React", "TypeScript", "Python", "FastAPI"],
+    tags: ["TypeScript", "Next.js", "NestJS", "MongoDB", "FastAPI", "AssemblyAI", "Redis", "BullMQ"],
   },
   {
+    id: "icti",
     role: "Backend Engineer",
     company: "ICTI",
-    period: "Dec 2025 — Feb 2026",
+    period: "Dec 2025 – Feb 2026",
     context: "Asset tokenization on the Internet Computer.",
     highlights: [
-      "Contributed asset tokenization and blockchain infrastructure using Rust and ICP DFX.",
-      "Added CI/CD smoke tests for canisters and ledgers, plus automated staging cycle monitoring and top-ups.",
+      "Evaluated existing tokenization and ledger code and implemented initial asset tokenization in Rust on Internet Computer (ICP) canisters.",
+      "Added CI smoke tests for canisters and ledgers, monitored staging cycle balances and consumption, and automated top-ups.",
     ],
     tags: ["Rust", "ICP", "CI/CD"],
   },
   {
+    id: "trade-imperial",
     role: "DevOps Engineer",
     company: "Trade Imperial",
-    period: "Jul 2025 — Aug 2025",
+    period: "Jul 2025 – Aug 2025",
     context: "Deployment and integrations for a trading application.",
     highlights: [
-      "Delivered rapid cloud deployment on DigitalOcean with automated CI/CD pipelines.",
-      "Added Twilio push notifications and real-time market-value webhooks.",
+      "Deployed the application to DigitalOcean and automated releases with CI/CD.",
+      "Integrated Twilio notifications and real-time market data webhooks.",
     ],
     tags: ["DigitalOcean", "PostgreSQL", "Twilio"],
   },
   {
+    id: "rapidsignal-electronics",
     role: "Software Engineer",
     company: "RapidSignal Electronics",
-    period: "May 2021 — Dec 2022",
+    period: "May 2021 – Dec 2022",
     context: "Enterprise systems for batching plants and manufacturing management.",
     highlights: [
-      "Worked with .NET MVC, ASP.NET Core APIs, Blazor, Dynamics AX 2012, and Dynamics 365.",
-      "Used SQL Server as the database for these enterprise systems.",
+      "Built batching plant software with ASP.NET Core, Blazor, Microsoft Dynamics, and SQL Server.",
+      "Contributed to a point-of-sale system for a donut shop built with ERPNext and Vue.js.",
     ],
-    tags: [".NET", "ASP.NET Core", "Blazor", "Dynamics AX", "Dynamics 365", "SQL Server"],
+    tags: ["ASP.NET Core", "Blazor", "Microsoft Dynamics", "SQL Server", "ERPNext", "Vue.js"],
   },
 ];
 
@@ -116,6 +133,7 @@ const technologyGroups = [
     tools: [
       { name: "Node.js", icon: "nodejs" },
       { name: "NestJS", icon: "nestjs" },
+      { name: "BullMQ" },
       { name: "C#", icon: "csharp" },
       { name: ".NET", icon: "dotnet" },
       { name: "ASP.NET Core", icon: "dotnet" },
@@ -128,6 +146,7 @@ const technologyGroups = [
     tools: [
       { name: "PostgreSQL", icon: "postgresql" },
       { name: "MongoDB", icon: "mongodb" },
+      { name: "Redis" },
       { name: "SQL Server", icon: "sqlserver" },
       { name: "Microsoft Dynamics", icon: "microsoft" },
     ],
@@ -209,21 +228,19 @@ export default function Home() {
       <main id="main">
         <section className="hero shell" id="top" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="eyebrow"><span className="eyebrow-line" aria-hidden="true" /> Discovery · Planning · Development · Delivery</p>
             <h1 id="hero-title">
               Senior <em>Full-Stack Engineer.</em>
             </h1>
             <p className="hero-description">
-              I help founders ship MVPs built to scale. I bring 5+ years of experience taking products from
-              idea to production through system architecture, full-stack development, API and AI integrations,
-              and cloud deployment.
+              I help founders and engineering teams build TypeScript SaaS products. My work spans system architecture,
+              full-stack development, AI integrations, and production deployment.
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href="mailto:johnmarkbodegas041095@gmail.com" data-umami-event="contact_email" data-umami-event-placement="hero">
-                Let’s discuss your idea. <span aria-hidden="true">↗</span>
+              <a className="button button-primary" href="#work">
+                Explore my work
               </a>
-              <a className="text-link" href="#work">
-                Explore my work <span aria-hidden="true">↓</span>
+              <a className="text-link" href="mailto:johnmarkbodegas041095@gmail.com" data-umami-event="contact_email" data-umami-event-placement="hero">
+                Get in touch
               </a>
             </div>
           </div>
@@ -241,32 +258,35 @@ export default function Home() {
 
         <section className="intro-band" aria-label="Professional summary">
           <div className="shell intro-inner">
-            <p className="section-kicker">A little about me</p>
             <p>
-              I build products from scratch through <strong>full-stack web development and system architecture</strong>,
-              connecting APIs, deploying to the cloud, and automating delivery with DevOps.
+              I bring <strong>5+ years of software engineering experience</strong> across sports analytics,
+              customer support quality assurance, and enterprise software.
             </p>
           </div>
         </section>
 
         <section className="section shell" id="work" aria-labelledby="work-title">
           <div className="section-heading">
-            <div>
-              <p className="section-kicker">Selected experience</p>
-              <h2 id="work-title">Where I worked and what I built.</h2>
-            </div>
-            <p>Real product work across web apps, integrations, and delivery.</p>
+            <h2 id="work-title">Selected work</h2>
           </div>
           <div className="experience-list">
-            {experience.map((item, index) => (
-              <article className="experience-item" key={item.company}>
-                <div className="experience-index" aria-hidden="true">
-                  {String(index + 1).padStart(2, "0")}
-                </div>
+            {experience.map((item) => (
+              <article className="experience-item" id={item.id} aria-labelledby={`${item.id}-title`} key={item.id}>
+                <header className="experience-header">
+                  <div>
+                    <h3 id={`${item.id}-title`}>{item.company}</h3>
+                    <p className="experience-role">{item.role}</p>
+                  </div>
+                  <p className="experience-period">{item.period}</p>
+                </header>
                 <div className="experience-main">
-                  <p className="experience-company">{item.company}</p>
-                  <h3>{item.role}</h3>
                   <p className="experience-context">{item.context}</p>
+                  {item.featured && (
+                    <div className="experience-feature">
+                      <h4>{item.featured.project}</h4>
+                      <p><strong>{item.featured.outcome}</strong> {item.featured.detail}</p>
+                    </div>
+                  )}
                   <ul className="experience-highlights">
                     {item.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
                   </ul>
@@ -284,7 +304,6 @@ export default function Home() {
                     </div>
                   )}
                 </div>
-                <p className="experience-period">{item.period}</p>
               </article>
             ))}
           </div>

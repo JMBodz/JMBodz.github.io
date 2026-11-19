@@ -3,7 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 
 const title = "John Mark Bodegas | Senior Full-Stack Engineer";
-const description = "I help founders ship MVPs built to scale, backed by 5+ years in software engineering.";
+const description = "Senior full-stack engineer helping founders and engineering teams build TypeScript SaaS products, integrate AI, and ship to production.";
 
 export const metadata: Metadata = {
   title,
